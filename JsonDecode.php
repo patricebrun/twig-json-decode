@@ -17,7 +17,7 @@ class JsonDecode extends \Twig_Extension
     public function getFilters()
     {
         return array(
-            'json_decode'   => new \Twig_Filter_Method($this, 'jsonDecode')
+            'json_decode'   => new \Twig_SimpleFilter($this->getName(), 'jsonDecode')
         );
     }
 
